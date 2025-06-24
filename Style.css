@@ -1,0 +1,37 @@
+/* Glow animation */
+@keyframes glowing {
+  0% { box-shadow: 0 0 5px #ff4d4d; }
+  50% { box-shadow: 0 0 20px #ff4d4d; }
+  100% { box-shadow: 0 0 5px #ff4d4d; }
+}
+
+/* Form + Section glass effect */
+form, section {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animate on load */
+.fade-in {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating pulse animation for buttons */
+.pulse-glow {
+  animation: pulseGlow 2s infinite;
+}
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0px rgba(255,255,255,0.4); }
+  50% { box-shadow: 0 0 15px rgba(255,255,255,0.8); }
+  100% { box-shadow: 0 0 0px rgba(255,255,255,0.4); }
+}
